@@ -1,11 +1,18 @@
 "use client"
 import React from "react";
-
+import styled from "styled-components";
 interface Props{
     children: React.ReactNode;
 }
 function GlobalStyleProvider({ children }: Props){
-    return<>{children}</>
+    return<GlobalStyles>{children}</GlobalStyles>
 }
 
-export default GlobalStyleProvider
+const GlobalStyles = styled.div`
+    pedding: 2.5rem;
+    display: flex;
+    gap: 2.5rem;
+    height: 100%;
+`;
+
+export default GlobalStyleProvider;
