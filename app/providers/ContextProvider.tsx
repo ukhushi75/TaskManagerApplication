@@ -1,15 +1,13 @@
 "use client";
 import React from "react";
-import GlobalStyleProvider from "./GlobalStyleProvider";
+import { GlobalProvider } from "../context/globalProvider";
 
 interface Props {
     children: React.ReactNode;
 }
 
 function ContextProvider({ children  }: Props) {
-    return <GlobalStyleProvider>{children}</GlobalStyleProvider>;
-       //now we should be able to access to the state, but we haven't wrapped our entire application yet.
-    
+   return <GlobalProvider>{children}</GlobalProvider>
 }
 
-export default ContextProvider
+export default ContextProvider;
